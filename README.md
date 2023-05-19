@@ -11,6 +11,21 @@ $ gem install standard_path
 ```ruby
 require 'standard_path'
 
-StandardPath.download
+StandardPath.downloads
 StandardPath.music
+StandardPath.app_local_data(my_app)
 ```
+
+## APIs
+
+- `.desktop`
+- `.documents`
+- `.downloads`
+- `.pictures`
+- `.music`
+- `.videos` / `.movies`
+
+- `.app_data(name)`
+- `.app_local_data(name)`
+- `.app_config(name)`
+- `.app_cache(name)`
