@@ -1,5 +1,5 @@
 # ---------------------------------------------------------------
-# File          : stardard_path.rb
+# File          : standard_path.rb
 # Authors       : Aoran Zeng <ccmywish@qq.com>
 # Created on    : <2023-05-19>
 # Last modified : <2023-05-19>
