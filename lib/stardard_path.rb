@@ -1,3 +1,14 @@
+# ---------------------------------------------------------------
+# File          : stardard_path.rb
+# Authors       : Aoran Zeng <ccmywish@qq.com>
+# Created on    : <2023-05-19>
+# Last modified : <2023-05-19>
+#
+# stardard_path:
+#
+#   Standard Path for corss-platform gems
+# ---------------------------------------------------------------
+
 module StandardPath
 
   VERSION = "0.1.0"
