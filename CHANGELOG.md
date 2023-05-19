@@ -10,6 +10,10 @@
 
 - Basically work
 
+### Bug fixes:
+
+- Fix bug: `circular argument reference`
+
 <br>
 
 ## [Initialize](#) (2023-05-19)
