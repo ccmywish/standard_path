@@ -33,7 +33,7 @@ class << StandardPath
   end
 
 
-  def desktop(os = os)
+  def desktop(os = self.os)
     case os
     when 'Windows', 'macOS', 'Linux'
       File.expand_path "~/Desktop"
@@ -43,7 +43,7 @@ class << StandardPath
   end
 
 
-  def documents(os = os)
+  def documents(os = self.os)
     case os
     when 'Windows', 'macOS', 'Linux'
       File.expand_path "~/Documents"
@@ -53,7 +53,7 @@ class << StandardPath
   end
 
 
-  def downloads(os = os)
+  def downloads(os = self.os)
     case os
     when 'Windows', 'macOS', 'Linux'
       File.expand_path "~/Downloads"
@@ -63,7 +63,7 @@ class << StandardPath
   end
 
 
-  def pictures(os = os)
+  def pictures(os = self.os)
     case os
     when 'Windows', 'macOS', 'Linux'
       File.join Dir.home, 'Pictures'
@@ -73,17 +73,17 @@ class << StandardPath
   end
 
 
-  def music(os = os)
+  def music(os = self.os)
     case os
     when 'Windows', 'macOS', 'Linux'
-      File.expand_path, '~/Music'
+      File.expand_path '~/Music'
     else
       raise NotSupportedOS, "#{name} doesn't know about #{__method__} path of '#{os}' you specify"
     end
   end
 
 
-  def movies(os = os)
+  def movies(os = self.os)
     case os
     when 'Windows', 'Linux'
       File.expand_path '~/Videos'
@@ -98,7 +98,7 @@ class << StandardPath
   alias videos movies
 
 
-  def app_data(app, os = os)
+  def app_data(app, os = self.os)
     base = case os
     when 'Windows'
       File.join "~/AppData/Roaming", app
@@ -113,7 +113,7 @@ class << StandardPath
   end
 
 
-  def app_local_data(app, os = os)
+  def app_local_data(app, os = self.os)
     base = case os
     when 'Windows'
       File.join "~/AppData/Local", app
@@ -128,7 +128,7 @@ class << StandardPath
   end
 
 
-  def app_config(app, os = os)
+  def app_config(app, os = self.os)
     base = case os
     when 'Windows'
       File.join "~/AppData/Local", app
@@ -143,7 +143,7 @@ class << StandardPath
   end
 
 
-  def app_cache(app, os = os)
+  def app_cache(app, os = self.os)
     base = case os
     when 'Windows'
       File.join "~/AppData/Local", app, 'cache'
