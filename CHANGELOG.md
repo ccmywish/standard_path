@@ -1,6 +1,14 @@
 # Changelog
 
-## [Unreleased](#) (2023-05-19)
+## [Unreleased](#) (2023-05-29)
+
+<br>
+
+## [v0.1.1](#) (2023-05-29)
+
+### New features:
+
+- Add `app_temp`
 
 <br>
 
