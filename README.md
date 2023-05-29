@@ -18,6 +18,8 @@ StandardPath.app_local_data(my_app)
 
 ## APIs
 
+- `.os`
+
 - `.desktop`
 - `.documents`
 - `.downloads`
@@ -29,3 +31,4 @@ StandardPath.app_local_data(my_app)
 - `.app_local_data(name)`
 - `.app_config(name)`
 - `.app_cache(name)`
+- `.app_temp(name)`
