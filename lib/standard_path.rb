@@ -2,7 +2,7 @@
 # File          : standard_path.rb
 # Authors       : Aoran Zeng <ccmywish@qq.com>
 # Created on    : <2023-05-19>
-# Last modified : <2023-05-19>
+# Last modified : <2023-05-29>
 #
 # stardard_path:
 #
@@ -11,7 +11,7 @@
 
 module StandardPath
 
-  VERSION = "0.1.0"
+  VERSION = "0.1.1"
 
   OSes = ['Windows', 'macOS', 'Linux']
 
@@ -162,6 +162,23 @@ class << StandardPath
       File.join "~/Library/Caches", app
     when 'Linux'
       File.join '~/.cache', app
+    else
+      raise NotSupportedOS, "#{self.name} doesn't know about #{__method__} path of '#{os}' you specify"
+    end
+    File.expand_path base
+  end
+
+
+  def app_temp(app, os = self.os)
+    base = case os
+    when 'Windows'
+      File.join "~/AppData/Local/Temp", app
+    when 'macOS'
+      # NOTE: I'm not sure if this dir is the most proper for macOS
+      #       Please affirm or fix it if you are sure.
+      File.join "/tmp", app
+    when 'Linux'
+      File.join '/tmp', app
     else
       raise NotSupportedOS, "#{self.name} doesn't know about #{__method__} path of '#{os}' you specify"
     end
